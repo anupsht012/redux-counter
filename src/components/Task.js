@@ -1,6 +1,9 @@
 export const Task = (props) =>{
     return  <div className="task-card">
-        <div className="close-icon" onClick={()=>props.remove(props.task.id)}><div className="material-icons">close</div></div>
+        <div className="icons-area" >
+            <div className="material-icons">edit</div>
+            <div className="material-icons" onClick={()=>props.remove(props.task.id)}>close</div>
+        </div>
         <div className="task-header">
             <div className="tag-chip"> {props.task.tag}</div>
         </div>

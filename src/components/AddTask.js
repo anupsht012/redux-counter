@@ -27,6 +27,7 @@ export const AddTask = (props)=>{
         e.preventDefault();
         props.addTask(task);
     }
+
     return <form className='add-task-form' onSubmit={createTask}>
         <div className="form-title">Add Task </div>
        <div className="form-content">

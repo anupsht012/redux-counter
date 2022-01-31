@@ -48,10 +48,13 @@ section.home{
     cursor: pointer;
     margin-bottom:8px;
     position: relative;
-    .close-icon{
+    .icons-area{
         position: absolute;
         top:4px;
         right:4px;
+        .material-icons{
+            margin-left:4px;
+        }
     }
 }
 
