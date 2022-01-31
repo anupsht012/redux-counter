@@ -9,8 +9,26 @@ nav{
 section.home{
     padding:3vh 7.5vw 0;
     overflow: auto;
-    height: calc(100vh - 60px);
-    background: rgba(0,0,0,.05);
+    height: calc(100vh - 88px);
+    display: flex;
+    flex-direction: column;
+    //background: rgba(0,0,0,.05);
+    position: relative;
+    &::before{
+        content:"";
+        position: absolute;
+        top:0;
+        left:0;
+        height:100%;
+        width:100%;
+        background: url("./assets/images/background.jpeg") center fixed;
+        background-size:cover;
+        filter:blur(1px);
+    }
+    &>div{
+        position: relative;
+        z-index: 1;
+    }
 }
 .title-area{
     display: flex;
@@ -27,11 +45,15 @@ section.home{
 
 .task-content{
     display: flex;
+    width:100%;
+    flex:1;
 }
 
 .task-container{
     padding:0 8px;
     flex:1;
+    height:100%;
+    overflow: auto;
 }
 
 .task-container-title{
@@ -42,7 +64,8 @@ section.home{
 
 .task-card {
     padding:16px;
-    background:white;
+    background:rgba(255,255,255,.4);
+    backdrop-filter: blur(3px);
     border-radius: 8px;
     transition: .3s;
     cursor: pointer;
@@ -59,7 +82,8 @@ section.home{
 }
 
 .task-card:hover{
-    box-shadow: 0 2px 16px 3px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 16px 3px rgba(0,0,0,0.3);
+    backdrop-filter: blur(8px);
 }
 
 .tag-chip{
@@ -84,6 +108,7 @@ section.home{
     position: fixed;
     top:0;
     left:0;
+    z-index: 9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -175,4 +200,14 @@ section.home{
              opacity: 1;
          }
 
+}
+
+.image-cover-center{
+    object-fit: cover;
+    object-position: center;
+}
+
+.image-contain-center{
+    object-fit: contain;
+    object-position: center;
 }

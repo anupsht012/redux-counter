@@ -1,6 +1,9 @@
+import {Logo} from "../common/Logo";
+
 export const Nav = ()=>(
     <nav>
-        <div className="logo">Logo</div>
+        <Logo/>
+
         <div className="nav-items">
             <div className="nav-item">Search</div>
         </div>
